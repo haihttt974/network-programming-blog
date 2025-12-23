@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><script src="/network-programming-blog/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=network-programming-blog/livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Blog Lập Trình Mạng | Blog Lập Trình Mạng</title>
+<meta name="keywords" content="">
+<meta name="description" content="Blog kỹ thuật tập trung vào lập trình, kiến trúc hệ thống và tư duy kỹ sư phần mềm">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/network-programming-blog/blog/">
+<link crossorigin="anonymous" href="/network-programming-blog/assets/css/stylesheet.fd5566c526ae48aadabd950798a2dc3568536401560eae5caac3765a42a9e7b5.css" integrity="sha256-/VVmxSauSKravZUHmKLcNWhTZAFWDq5cqsN2WkKp57U=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/network-programming-blog/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/network-programming-blog/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/network-programming-blog/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/network-programming-blog/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/network-programming-blog/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/network-programming-blog/blog/index.xml" title="rss">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/network-programming-blog/blog/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><link rel="stylesheet" href="/network-programming-blog/css/blog-layout.css">
+
+</head>
+<body class="list" id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/network-programming-blog/" accesskey="h" title="Blog Lập Trình Mạng (Alt + H)">Blog Lập Trình Mạng</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/network-programming-blog/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/network-programming-blog/blog/" title="Blog">
+                    <span class="active">Blog</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/network-programming-blog/topics/" title="Topics">
+                    <span>Topics</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/network-programming-blog/roadmaps/" title="Roadmaps">
+                    <span>Roadmaps</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/network-programming-blog/about/" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+
+<aside class="blog-float-sidebar" aria-label="Author profile">
+  <div class="profile-card">
+
+    <img src="/network-programming-blog/images/avatar.jpg" alt="Hai Le" class="profile-avatar">
+
+    <h2 class="profile-name">Hai Le</h2>
+    <p class="profile-role">Software Engineer · System Thinking</p>
+
+    <p class="profile-desc">
+      Backend · System Architecture · Long-term Learning
+    </p>
+
+    <div class="profile-links">
+      <a href="mailto:ld.hai.insys@gmail.com">Email</a>
+      <a href="https://github.com/haihttt974" target="_blank" rel="noopener">GitHub</a>
+    </div>
+
+    <hr>
+
+    <ul class="profile-focus">
+      <li>Backend Architecture</li>
+      <li>System Design</li>
+      <li>Programming Languages</li>
+      <li>Clean Code</li>
+    </ul>
+
+  </div>
+</aside>
+
+
+<main class="main">
+  <div class="container">
+    <article class="post-single">
+      <header class="post-header">
+        <h1>Blog Lập Trình Mạng</h1>
+        
+          <p class="post-description">Blog kỹ thuật tập trung vào lập trình, kiến trúc hệ thống và tư duy kỹ sư phần mềm</p>
+        
+      </header>
+
+      <div class="post-content">
+        <h2 id="tổng-quan">Tổng quan</h2>
+<p><strong>Blog Lập Trình Mạng</strong> là một blog kỹ thuật được xây dựng với mục tiêu duy nhất:</p>
+<blockquote>
+<p><strong>Lưu trữ, hệ thống hóa và chia sẻ kiến thức lập trình một cách nghiêm túc, có cấu trúc và có chiều sâu.</strong></p>
+</blockquote>
+<p>Blog không được xây dựng để chạy theo xu hướng, không viết nội dung hời hợt, không phục vụ mục đích marketing hay xây dựng hình ảnh cá nhân.</p>
+<p>Mọi nội dung đều xoay quanh ba trục chính:</p>
+<ul>
+<li><strong>Bản chất kỹ thuật</strong></li>
+<li><strong>Tư duy hệ thống</strong></li>
+<li><strong>Khả năng áp dụng lâu dài trong thực tế</strong></li>
+</ul>
+<hr>
+<h2 id="triết-lý-xây-dựng-blog">Triết lý xây dựng blog</h2>
+<p>Blog này được xây dựng dựa trên các nguyên tắc sau:</p>
+<ul>
+<li><strong>Hiểu bản chất trước khi dùng công cụ</strong></li>
+<li><strong>Hệ thống hóa kiến thức thay vì ghi nhớ rời rạc</strong></li>
+<li><strong>Ưu tiên tư duy kiến trúc hơn framework</strong></li>
+<li><strong>Code là phương tiện, không phải mục tiêu</strong></li>
+<li><strong>Không có công nghệ “tốt nhất”, chỉ có công nghệ “phù hợp với ngữ cảnh”</strong></li>
+</ul>
+<p>Mỗi bài viết được coi như một <strong>tài liệu kỹ thuật</strong>, không phải bài blog giải trí hay tutorial ngắn hạn.</p>
+<hr>
+<h2 id="định-hướng-nội-dung-chính">Định hướng nội dung chính</h2>
+<h3 id="1-ngôn-ngữ-lập-trình">1. Ngôn ngữ lập trình</h3>
+<p>Các ngôn ngữ lập trình được phân tích dưới góc nhìn của một kỹ sư phần mềm, tập trung vào:</p>
+<ul>
+<li>Mục đích thiết kế ban đầu</li>
+<li>Paradigm và triết lý cốt lõi</li>
+<li>Điểm mạnh và giới hạn trong thực tế</li>
+<li>Vị trí của ngôn ngữ trong hệ sinh thái phần mềm</li>
+<li>Lộ trình học phù hợp theo từng mục tiêu</li>
+</ul>
+<p>Ngôn ngữ lập trình được tiếp cận như <strong>công cụ giải quyết vấn đề</strong>, không phải trào lưu.</p>
+<p>→ <a href="http://localhost:1313/network-programming-blog/languages/">Xem danh sách ngôn ngữ</a></p>
+<hr>
+<h3 id="2-framework--hệ-sinh-thái">2. Framework &amp; Hệ sinh thái</h3>
+<p>Framework được phân tích dựa trên:</p>
+<ul>
+<li>Kiến trúc nội tại</li>
+<li>Core concepts</li>
+<li>Cách framework giải quyết các bài toán phổ biến</li>
+<li>Khi nào nên dùng và khi nào không nên dùng</li>
+<li>So sánh với các framework cùng nhóm</li>
+</ul>
+<p>Blog không khuyến khích việc <strong>chọn framework chỉ vì độ phổ biến</strong>.</p>
+<p>→ <a href="http://localhost:1313/network-programming-blog/frameworks/">Xem Frameworks</a></p>
+<hr>
+<h3 id="3-kiến-trúc--so-sánh">3. Kiến trúc &amp; So sánh</h3>
+<p>Phần này tập trung vào <strong>tư duy thiết kế hệ thống</strong>, bao gồm:</p>
+<ul>
+<li>Monolith vs Microservices</li>
+<li>Clean Architecture</li>
+<li>Layered Architecture</li>
+<li>REST vs GraphQL</li>
+<li>Các pattern phổ biến trong backend và frontend</li>
+</ul>
+<p>Mục tiêu không phải là hướng dẫn triển khai từng bước, mà là:</p>
+<blockquote>
+<p><strong>Giúp người đọc hiểu vì sao kiến trúc đó tồn tại và nên dùng trong bối cảnh nào.</strong></p>
+</blockquote>
+<p>→ <a href="http://localhost:1313/network-programming-blog/architecture/">Xem Architecture</a></p>
+<hr>
+<h3 id="4-lộ-trình-học-tập">4. Lộ trình học tập</h3>
+<p>Các lộ trình học được xây dựng dựa trên:</p>
+<ul>
+<li>Mục tiêu nghề nghiệp thực tế</li>
+<li>Năng lực nền tảng cần có</li>
+<li>Tránh học lan man, chắp vá</li>
+<li>Ưu tiên kiến thức có tính tích lũy dài hạn</li>
+</ul>
+<p>Roadmap được thiết kế để <strong>học bền vững</strong>, không phải “học cấp tốc”.</p>
+<p>→ <a href="http://localhost:1313/network-programming-blog/roadmaps/">Xem Roadmaps</a></p>
+<hr>
+<h3 id="5-thực-hành--ví-dụ">5. Thực hành &amp; Ví dụ</h3>
+<p>Các bài thực hành tập trung vào:</p>
+<ul>
+<li>Hiểu rõ bản chất vấn đề</li>
+<li>Code rõ ràng, có cấu trúc</li>
+<li>Tránh “magic” không cần thiết</li>
+<li>Có khả năng mở rộng về sau</li>
+</ul>
+<p>Không chạy theo project phức tạp nếu không phục vụ mục tiêu học tập.</p>
+<p>→ <a href="http://localhost:1313/network-programming-blog/practice/">Xem Practice</a></p>
+<hr>
+<h2 id="về-tác-giả">Về tác giả</h2>
+<p>Tôi là người xây dựng và duy trì blog này.</p>
+<p>Tôi không coi mình là “chuyên gia” và cũng không cố xây dựng hình ảnh cá nhân.<br>
+Tôi tiếp cận lập trình với tư duy của một <strong>kỹ sư hệ thống</strong>:</p>
+<ul>
+<li>Ưu tiên hiểu sâu thay vì biết nhiều</li>
+<li>Quan tâm đến kiến trúc và khả năng mở rộng</li>
+<li>Đánh giá công nghệ dựa trên ngữ cảnh sử dụng</li>
+<li>Không thần thánh hóa bất kỳ framework hay ngôn ngữ nào</li>
+</ul>
+<p>Blog này trước hết là <strong>kho kiến thức cá nhân</strong>, sau đó mới là nơi chia sẻ.</p>
+<hr>
+<h2 id="phong-cách-nội-dung">Phong cách nội dung</h2>
+<ul>
+<li>Văn phong kỹ thuật, trung lập</li>
+<li>Không giật tiêu đề</li>
+<li>Không viết cho SEO bằng mọi giá</li>
+<li>Không sao chép nội dung</li>
+<li>Không dịch máy</li>
+<li>Không lan man ngoài mục tiêu kỹ thuật</li>
+</ul>
+<p>Mỗi bài viết đều có cấu trúc rõ ràng và có thể đọc lại sau nhiều năm.</p>
+<hr>
+<h2 id="đối-tượng-phù-hợp">Đối tượng phù hợp</h2>
+<p>Blog này phù hợp nếu bạn:</p>
+<ul>
+<li>Muốn học lập trình một cách bài bản</li>
+<li>Muốn hiểu vì sao công nghệ được thiết kế như vậy</li>
+<li>Không thích học theo tutorial rời rạc</li>
+<li>Quan tâm đến kiến trúc và tư duy hệ thống</li>
+</ul>
+<p>Blog <strong>không phù hợp</strong> nếu bạn chỉ tìm:</p>
+<ul>
+<li>Snippet nhanh</li>
+<li>Cách làm tắt</li>
+<li>Mẹo phỏng vấn cấp tốc</li>
+</ul>
+<hr>
+<h2 id="liên-hệ">Liên hệ</h2>
+<ul>
+<li><strong>Email</strong>: <a href="mailto:ld.hai.insys@gmail.com">ld.hai.insys@gmail.com</a></li>
+<li><strong>GitHub</strong>: <a href="https://github.com/haihttt974">https://github.com/haihttt974</a></li>
+</ul>
+<p>Mọi góp ý mang tính kỹ thuật đều được hoan nghênh.</p>
+<hr>
+<h2 id="ghi-chú-cuối">Ghi chú cuối</h2>
+<p>Blog này được xây dựng như một <strong>tài sản kiến thức dài hạn</strong>.<br>
+Nội dung sẽ được cập nhật, chỉnh sửa và mở rộng theo thời gian.</p>
+<p>Không cam kết số lượng bài viết.<br>
+Chỉ cam kết <strong>chất lượng và tính nhất quán</strong>.</p>
+<hr>
+
+      </div>
+    </article>
+  </div>
+</main>
+
+
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="http://localhost:1313/network-programming-blog/">Blog Lập Trình Mạng</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a><script src="/network-programming-blog/js/particle-bg.js"></script>
+
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

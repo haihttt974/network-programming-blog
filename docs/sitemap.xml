@@ -16,6 +16,8 @@
   </url><url>
     <loc>http://localhost:1313/network-programming-blog/categories/backend/</loc>
   </url><url>
+    <loc>http://localhost:1313/network-programming-blog/blog/</loc>
+  </url><url>
     <loc>http://localhost:1313/network-programming-blog/categories/</loc>
   </url><url>
     <loc>http://localhost:1313/network-programming-blog/practice/fastapi-crud/</loc>

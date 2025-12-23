@@ -1,0 +1,51 @@
+{{ define "main" }}
+
+<!-- OUTSIDE / OVERLAY SIDEBAR (NOT AFFECTING CONTENT WIDTH) -->
+<aside class="blog-float-sidebar" aria-label="Author profile">
+  <div class="profile-card">
+
+    <img src="{{ "images/avatar.jpg" | relURL }}" alt="Hai Le" class="profile-avatar">
+
+    <h2 class="profile-name">Hai Le</h2>
+    <p class="profile-role">Software Engineer · System Thinking</p>
+
+    <p class="profile-desc">
+      Backend · System Architecture · Long-term Learning
+    </p>
+
+    <div class="profile-links">
+      <a href="mailto:ld.hai.insys@gmail.com">Email</a>
+      <a href="https://github.com/haihttt974" target="_blank" rel="noopener">GitHub</a>
+    </div>
+
+    <hr>
+
+    <ul class="profile-focus">
+      <li>Backend Architecture</li>
+      <li>System Design</li>
+      <li>Programming Languages</li>
+      <li>Clean Code</li>
+    </ul>
+
+  </div>
+</aside>
+
+<!-- PAPERMOD CONTENT: KEEP DEFAULT WIDTH -->
+<main class="main">
+  <div class="container">
+    <article class="post-single">
+      <header class="post-header">
+        <h1>{{ .Title }}</h1>
+        {{ with .Description }}
+          <p class="post-description">{{ . }}</p>
+        {{ end }}
+      </header>
+
+      <div class="post-content">
+        {{ .Content }}
+      </div>
+    </article>
+  </div>
+</main>
+
+{{ end }}
