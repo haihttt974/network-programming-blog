@@ -2,14 +2,48 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/network-programming-blog/roadmaps/backend-developer/</loc>
+  </url><url>
+    <loc>http://localhost:1313/network-programming-blog/architecture/rest-vs-graphql/</loc>
+  </url><url>
     <loc>http://localhost:1313/network-programming-blog/about/</loc>
     <lastmod>2025-12-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/network-programming-blog/</loc>
     <lastmod>2025-12-20T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/network-programming-blog/tags/api/</loc>
+  </url><url>
+    <loc>http://localhost:1313/network-programming-blog/categories/backend/</loc>
+  </url><url>
     <loc>http://localhost:1313/network-programming-blog/categories/</loc>
   </url><url>
+    <loc>http://localhost:1313/network-programming-blog/practice/fastapi-crud/</loc>
+  </url><url>
+    <loc>http://localhost:1313/network-programming-blog/tags/fastapi/</loc>
+  </url><url>
+    <loc>http://localhost:1313/network-programming-blog/frameworks/</loc>
+  </url><url>
+    <loc>http://localhost:1313/network-programming-blog/architecture/</loc>
+  </url><url>
+    <loc>http://localhost:1313/network-programming-blog/roadmaps/</loc>
+  </url><url>
+    <loc>http://localhost:1313/network-programming-blog/languages/</loc>
+  </url><url>
+    <loc>http://localhost:1313/network-programming-blog/categories/practice/</loc>
+  </url><url>
+    <loc>http://localhost:1313/network-programming-blog/languages/python/</loc>
+  </url><url>
+    <loc>http://localhost:1313/network-programming-blog/tags/python/</loc>
+  </url><url>
+    <loc>http://localhost:1313/network-programming-blog/frameworks/react/</loc>
+  </url><url>
+    <loc>http://localhost:1313/network-programming-blog/tags/rest/</loc>
+  </url><url>
     <loc>http://localhost:1313/network-programming-blog/tags/</loc>
+  </url><url>
+    <loc>http://localhost:1313/network-programming-blog/practice/</loc>
+  </url><url>
+    <loc>http://localhost:1313/network-programming-blog/topics/</loc>
   </url>
 </urlset>

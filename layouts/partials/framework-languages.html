@@ -1,0 +1,8 @@
+{{ with .Params.languages }}
+<h2>Ngôn ngữ sử dụng</h2>
+<ul>
+  {{ range . }}
+    <li>{{ . | title }}</li>
+  {{ end }}
+</ul>
+{{ end }}

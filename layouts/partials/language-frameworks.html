@@ -1,0 +1,12 @@
+{{ with .Params.frameworks }}
+<h2>Framework liên quan</h2>
+<ul>
+  {{ range . }}
+    <li>
+      <a href="{{ printf "/frameworks/%s/" . | relURL }}">
+        {{ . | title }}
+      </a>
+    </li>
+  {{ end }}
+</ul>
+{{ end }}

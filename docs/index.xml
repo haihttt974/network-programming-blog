@@ -9,6 +9,20 @@
     <lastBuildDate>Sat, 20 Dec 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/network-programming-blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Backend Developer</title>
+      <link>http://localhost:1313/network-programming-blog/roadmaps/backend-developer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/network-programming-blog/roadmaps/backend-developer/</guid>
+      <description>Lộ trình học backend từ cơ bản đến nâng cao</description>
+    </item>
+    <item>
+      <title>REST vs GraphQL</title>
+      <link>http://localhost:1313/network-programming-blog/architecture/rest-vs-graphql/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/network-programming-blog/architecture/rest-vs-graphql/</guid>
+      <description>So sánh hai kiến trúc API phổ biến: REST và GraphQL</description>
+    </item>
+    <item>
       <title>About</title>
       <link>http://localhost:1313/network-programming-blog/about/</link>
       <pubDate>Sat, 20 Dec 2025 00:00:00 +0000</pubDate>
@@ -24,6 +38,53 @@
 &lt;/ul&gt;
 &lt;h2 id=&#34;ghi-chú&#34;&gt;Ghi chú&lt;/h2&gt;
 &lt;p&gt;Nội dung đang trong quá trình hoàn thiện.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>CRUD API với FastAPI</title>
+      <link>http://localhost:1313/network-programming-blog/practice/fastapi-crud/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/network-programming-blog/practice/fastapi-crud/</guid>
+      <description>&lt;h2 id=&#34;1-mục-tiêu&#34;&gt;1. Mục tiêu&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Xây dựng REST API CRUD cơ bản&lt;/li&gt;
+&lt;li&gt;Hiểu cách FastAPI xử lý request / response&lt;/li&gt;
+&lt;li&gt;Nắm được routing và schema dữ liệu&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;2-chuẩn-bị-môi-trường&#34;&gt;2. Chuẩn bị môi trường&lt;/h2&gt;
+&lt;p&gt;Yêu cầu:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Python &amp;gt;= 3.9&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Tạo virtual environment và cài đặt FastAPI:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;python -m venv venv
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;source venv/bin/activate
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;pip install fastapi uvicorn
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id=&#34;3-tạo-ứng-dụng-fastapi-cơ-bản&#34;&gt;3. Tạo ứng dụng FastAPI cơ bản&lt;/h2&gt;
+&lt;p&gt;Tạo file &lt;code&gt;main.py&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;from&lt;/span&gt; fastapi &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; FastAPI
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;app &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; FastAPI()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;@app.get&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;root&lt;/span&gt;():
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; {&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;message&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Hello FastAPI&amp;#34;&lt;/span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Chạy server:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Python</title>
+      <link>http://localhost:1313/network-programming-blog/languages/python/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/network-programming-blog/languages/python/</guid>
+      <description>Ngôn ngữ lập trình đa dụng, phổ biến trong backend, data và AI</description>
+    </item>
+    <item>
+      <title>React</title>
+      <link>http://localhost:1313/network-programming-blog/frameworks/react/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/network-programming-blog/frameworks/react/</guid>
+      <description>Thư viện xây dựng giao diện người dùng dựa trên component</description>
     </item>
   </channel>
 </rss>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Framework on Blog Lập Trình Mạng</title>
+    <link>http://localhost:1313/network-programming-blog/frameworks/</link>
+    <description>Recent content in Framework on Blog Lập Trình Mạng</description>
+    <generator>Hugo -- 0.153.0</generator>
+    <language>vi</language>
+    <atom:link href="http://localhost:1313/network-programming-blog/frameworks/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>React</title>
+      <link>http://localhost:1313/network-programming-blog/frameworks/react/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/network-programming-blog/frameworks/react/</guid>
+      <description>Thư viện xây dựng giao diện người dùng dựa trên component</description>
+    </item>
+  </channel>
+</rss>

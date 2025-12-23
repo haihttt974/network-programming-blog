@@ -29,7 +29,19 @@ canonifyURLs = false
     weight = 2
 
   [[menu.main]]
+    identifier = "topics"
+    name = "Topics"
+    url = "/topics/"
+    weight = 3
+
+  [[menu.main]]
+    identifier = "roadmaps"
+    name = "Roadmaps"
+    url = "/roadmaps/"
+    weight = 4
+
+  [[menu.main]]
     identifier = "about"
     name = "About"
     url = "/about/"
-    weight = 3
+    weight = 5
