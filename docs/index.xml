@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Blog Lập Trình Mạng</title>
+    <link>http://localhost:1313/network-programming-blog/</link>
+    <description>Recent content on Blog Lập Trình Mạng</description>
+    <generator>Hugo -- 0.153.0</generator>
+    <language>vi</language>
+    <lastBuildDate>Sat, 20 Dec 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/network-programming-blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About</title>
+      <link>http://localhost:1313/network-programming-blog/about/</link>
+      <pubDate>Sat, 20 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/network-programming-blog/about/</guid>
+      <description>&lt;h2 id=&#34;giới-thiệu&#34;&gt;Giới thiệu&lt;/h2&gt;
+&lt;p&gt;Đây là blog cá nhân phục vụ cho đồ án học phần &lt;strong&gt;Lập trình mạng máy tính&lt;/strong&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;nội-dung-blog&#34;&gt;Nội dung blog&lt;/h2&gt;
+&lt;p&gt;Blog tập trung chia sẻ các kiến thức nền tảng về:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Mạng máy tính (Networking Basics)&lt;/li&gt;
+&lt;li&gt;Java &amp;amp; JavaScript&lt;/li&gt;
+&lt;li&gt;Tư duy Real-Time Communications&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;ghi-chú&#34;&gt;Ghi chú&lt;/h2&gt;
+&lt;p&gt;Nội dung đang trong quá trình hoàn thiện.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

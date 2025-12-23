@@ -1,0 +1,35 @@
+baseURL = "https://haihttt974.github.io/network-programming-blog/"
+languageCode = "vi"
+title = "Blog Lập Trình Mạng"
+theme = "PaperMod"
+
+# GitHub Pages dùng /docs
+publishDir = "docs"
+
+# QUAN TRỌNG: KHÔNG dùng relative URLs với PaperMod
+relativeURLs = false
+canonifyURLs = false
+
+[params]
+  ShowReadingTime = true
+  ShowCodeCopyButtons = true
+
+[menu]
+
+  [[menu.main]]
+    identifier = "home"
+    name = "Home"
+    url = "/"
+    weight = 1
+
+  [[menu.main]]
+    identifier = "blog"
+    name = "Blog"
+    url = "/posts/"
+    weight = 2
+
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 3
